@@ -53,7 +53,4 @@ $ python manage.py runserver
 
 Provide information for developers who want to contribute to the project. Include guidelines for submitting issues, feature requests, and pull requests.
 
-## Development Guidelines
-
-Include information about coding style, conventions, and any other guidelines developers should follow while contributing to the project.
 
