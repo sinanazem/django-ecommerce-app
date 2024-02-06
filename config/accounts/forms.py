@@ -37,3 +37,14 @@ class UserChangeForm(forms.ModelForm):
         model = User
         fields = ("phone_number", "email", "full_name", "password", "last_login")
         
+from django import forms
+
+class UserRegistrationForm(forms.Form):
+    
+    phone_number = forms.CharField(max_length=11, widget=forms.TextInput(attrs={"class": "form-control"}))
+    email = forms.EmailField(max_length=255, widget=forms.TextInput(attrs={"class": "form-control"}))
+    full_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={"class": "form-control"}))
+    password = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={"class": "form-control"}))
+
+    
+        

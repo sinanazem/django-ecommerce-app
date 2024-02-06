@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+<!-- <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Register">
+
+</form> -->
+
+<div class="container mt-5">
+    <div class="display-6 mb-5 text-primary">User Registration</div>
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <form method="post" class="row g-3">
+                {% csrf_token %}
+                
+                {{ form.email.label_tag }}
+                <div class="col-md-12">
+                    {{ form.email }}
+                </div>
+
+                {{ form.password.label_tag }}
+                <div class="col-md-12">
+                    {{ form.password }}
+                </div>
+
+                {{ form.full_name.label_tag }}
+                <div class="col-12">
+                    {{ form.full_name }}
+                </div>
+
+                {{ form.phone_number.label_tag }}
+                <div class="col-12">
+                    {{ form.phone_number }}
+                </div>
+
+                <div class="col-12">
+                    <div class="form-check">
+                        {{ form.check_me_out }}
+                        {{ form.check_me_out.label_tag }}
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <img class="img-fluid" src="https://cdni.iconscout.com/illustration/premium/thumb/online-user-sign-up-4489365-3723272.png">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
