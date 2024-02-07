@@ -3,8 +3,6 @@
 
 # Django Ecommerce Project
 
-## Project Overview
-
 
 ## Table of Contents
 
