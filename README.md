@@ -1,7 +1,10 @@
-# Django Online Shop
-<img src="https://www.datocms-assets.com/64091/1648894746-frame-532.svg">
+<div>
+  <h1>Django Ecommerce Project</h1>
+    <img src="https://www.datocms-assets.com/64091/1648894746-frame-532.svg" alt="Nobel Prize" width="350" align="left" hspace="10">
+    
+</div>
 
-# Django Ecommerce Project
+
 
 
 ## Table of Contents
@@ -11,7 +14,9 @@
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Development Guidelines](#development-guidelines)
+<br><br><br><br><br><br><br>
+
+
 
 ## Getting Started
 
