@@ -16,3 +16,8 @@ class ArticleView(View):
         articles = Article.objects.all()
         return render(request, "home/articles.html",{"articles":articles})
     
+class CommunityView(View):
+    def get(self, request):
+        
+        return render(request, "home/community.html")
+    
