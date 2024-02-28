@@ -1,72 +1,171 @@
 {% extends 'base.html' %}
 {% load static %}
+
+
 {% block title %}
 Home
 {% endblock %}
 
-{% block extra_headers%} 
+{% block extra_headers%}
 
-<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name="description" content="A well made and handcrafted Bootstrap 5 template">
-<link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/img/apple-touch-icon.png' %}">
-<link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/img/favicon-32x32.png' %}">
-<link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/img/favicon-16x16.png' %}">
-<link rel="icon" type="image/png" sizes="96x96" href="{% static 'home/img/favicon.png' %}">
-<meta name="author" content="Holger Koenemann">
-<meta name="generator" content="Eleventy v2.0.0">
-<meta name="HandheldFriendly" content="true">
-<title>Klar HTML Template - Frontpage one</title>
-<link rel="stylesheet" href="{% static 'homw/css/theme.min.css' %}">
+<title>Tutor &mdash; Free Website Template by Colorlib</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
- <style>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-/* inter-300 - latin */
-@font-face {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 300;
-font-display: swap;
-src: local(''),
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+<link rel="stylesheet" href="{% static 'home/fonts/icomoon/style.css' %}">
+<link rel="stylesheet" href="fonts/brand/style.css">
 
-/* inter-400 - latin */
-@font-face {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-display: swap;
-src: local(''),
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+<link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/bootstrap-datepicker.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/jquery.fancybox.min.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/aos.css' %}">
 
-@font-face {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-display: swap;
-src: local(''),
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-@font-face {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-display: swap;
-src: local(''),
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-     url('/mnt/c/Users/user/OneDrive/Desktop/436a3e45-30a6-41cc-aa37-d1c7f69273e7 (1)/fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-</style>
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 
 {% endblock %}
 
 {% block content %}
-<div class="container mt-4">
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar light site-navbar-target" role="banner">
+
+  <div class="container">
+    <div class="row align-items-center position-relative">
+
+      <div class="col-3">
+        <div class="site-logo">
+          <a href="index.html"><strong>Asama Academy</strong></a>
+        </div>
+      </div>
+
+      <div class="col-9  text-right">
+        
+        <span class="d-inline-block d-lg-none"><a href="#" class=" site-menu-toggle js-menu-toggle py-5 "><span class="icon-menu h3 text-black"></span></a></span>
+
+        <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav ml-auto ">
+            <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="tutorials.html" class="nav-link">Courses</a></li>
+            <li><a href="testimonials.html" class="nav-link">Community</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      
+    </div>
+  </div>
+
+</header>
+
+<div class="site-section-cover overlay" style="background-image: url('https://uoguelph-mlrg.github.io/images/ml_background.png');">
+        
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1>The <strong>A platform for data science online courses.</strong></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center mb-5">
+        <div class="heading">
+          <span class="caption">Testimonials</span>
+          <h2>Student Reviews</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="testimonial-2">
+          <h3 class="h5">Excellent Teacher!</h3>
+          <div>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star-o text-warning"></span>
+          </div>
+          <blockquote class="mb-4">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+          </blockquote>
+          <div class="d-flex v-card align-items-center">
+            <img src="images/person_1.jpg" alt="Image" class="img-fluid mr-3">
+            <div class="author-name">
+              <span class="d-block">Mike Fisher</span>
+              <span>Owner, Ford</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="testimonial-2">
+          <h3 class="h5">Best Video Tutorial!</h3>
+          <div>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star-o text-warning"></span>
+          </div>
+          <blockquote class="mb-4">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+          </blockquote>
+          <div class="d-flex v-card align-items-center">
+            <img src="images/person_2.jpg" alt="Image" class="img-fluid mr-3">
+            <div class="author-name">
+              <span class="d-block">Jean Stanley</span>
+              <span>Traveler</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="testimonial-2">
+          <h3 class="h5">Easy to Understand!</h3>
+          <div>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star text-warning"></span>
+            <span class="icon-star-o text-warning"></span>
+          </div>
+          <blockquote class="mb-4">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+          </blockquote>
+          <div class="d-flex v-card align-items-center">
+            <img src="images/person_3.jpg" alt="Image" class="img-fluid mr-3">
+            <div class="author-name">
+              <span class="d-block">Katie Rose</span>
+              <span >Customer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container mt-4">
   <div class="row align-items-center ">
       <div class="col-md-6">
         
@@ -81,7 +180,7 @@ src: local(''),
           <img src="{% static 'home/img/Catalogue-cuate.png' %}" class="img-fluid">
       </div>
   </div>
-</div>
+</div> -->
 
 
 {% endblock %}
