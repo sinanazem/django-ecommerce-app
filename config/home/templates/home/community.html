@@ -6,21 +6,18 @@
     <style>
         /* Add custom styles here */
         body {
-            background-color: #222; /* Dark background color */
+            background-color: #4a4949; /* Dark background color */
             color: #fff; /* Light text color */
         }
         .card {
-            border-radius: 20px; /* Curved border */
+            border-radius: 10px; /* Curved border */
             background-color: #333; /* Dark background color for card */
             border: none; /* Remove border */
-        }
-        .card-title,
-        .card-text {
-            text-align: center; /* Center the name, job position, and join date */
+            text-align: center; /* Center content within card */
         }
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%; /* Make it a circle */
             object-fit: cover;
             margin: 0 auto 15px; /* Center image horizontally and add space at the bottom */
@@ -40,12 +37,21 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="site-section-cover overlay" style="background-image: url('https://wallpaperset.com/w/full/8/e/3/191343.jpg');">
+        
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h1>The <strong>A platform for data science online courses.</strong></h1>
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-3">
             <div class="card">
-                <img src="https://media.licdn.com/dms/image/D4E03AQE24CQG_L-JNQ/profile-displayphoto-shrink_800_800/0/1673714315925?e=2147483647&v=beta&t=wFIbfcWvzASwQhsgsc9t0uYYRbCHFDvJWMwdOxkPCyc" alt="Sina Nazem" class="card-img-top profile-img mt-4 ">
+                <img src="https://api.pytopia.ai/media/user/avatars/Sinanazem/profile_picture.png" alt="Sina Nazem" class="card-img-top profile-img mt-4 ">
                 <div class="card-body">
                     <h5 class="card-title">Sina Nazem</h5>
                     <p class="card-text">Software Engineer</p>
@@ -61,60 +67,7 @@
                 
             </div>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-              <img src="https://media.licdn.com/dms/image/D4E03AQE24CQG_L-JNQ/profile-displayphoto-shrink_800_800/0/1673714315925?e=2147483647&v=beta&t=wFIbfcWvzASwQhsgsc9t0uYYRbCHFDvJWMwdOxkPCyc" alt="Sina Nazem" class="card-img-top profile-img mt-4 ">
-              <div class="card-body">
-                  <h5 class="card-title">Sina Nazem</h5>
-                  <p class="card-text">Software Engineer</p>
-                  <ul class="list-unstyled social-icons">
-                      <li><a href="https://t.me/johndoe" target="_blank"><i class="fab fa-telegram"></i></a></li>
-                      <li><a href="https://www.instagram.com/johndoe" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                      <li><a href="https://twitter.com/johndoe" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="https://www.linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                      <li><a href="https://www.johndoe.com" target="_blank"><i class="fas fa-globe"></i></a></li>
-                  </ul>
-                  <p class="card-text">January 1, 2023</p>
-              </div>
-              
-          </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-            <img src="https://media.licdn.com/dms/image/D4E03AQE24CQG_L-JNQ/profile-displayphoto-shrink_800_800/0/1673714315925?e=2147483647&v=beta&t=wFIbfcWvzASwQhsgsc9t0uYYRbCHFDvJWMwdOxkPCyc" alt="Sina Nazem" class="card-img-top profile-img mt-4 ">
-            <div class="card-body">
-                <h5 class="card-title">Sina Nazem</h5>
-                <p class="card-text">Software Engineer</p>
-                <ul class="list-unstyled social-icons">
-                    <li><a href="https://t.me/johndoe" target="_blank"><i class="fab fa-telegram"></i></a></li>
-                    <li><a href="https://www.instagram.com/johndoe" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://twitter.com/johndoe" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.johndoe.com" target="_blank"><i class="fas fa-globe"></i></a></li>
-                </ul>
-                <p class="card-text">January 1, 2023</p>
-            </div>
-            
-        </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-          <img src="https://media.licdn.com/dms/image/D4E03AQE24CQG_L-JNQ/profile-displayphoto-shrink_800_800/0/1673714315925?e=2147483647&v=beta&t=wFIbfcWvzASwQhsgsc9t0uYYRbCHFDvJWMwdOxkPCyc" alt="Sina Nazem" class="card-img-top profile-img mt-4 ">
-          <div class="card-body">
-              <h5 class="card-title">Sina Nazem</h5>
-              <p class="card-text">Software Engineer</p>
-              <ul class="list-unstyled social-icons">
-                  <li><a href="https://t.me/johndoe" target="_blank"><i class="fab fa-telegram"></i></a></li>
-                  <li><a href="https://www.instagram.com/johndoe" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://twitter.com/johndoe" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href="https://www.johndoe.com" target="_blank"><i class="fas fa-globe"></i></a></li>
-              </ul>
-              <p class="card-text">January 1, 2023</p>
-          </div>
-          
-      </div>
-  </div>
+        <!-- Repeat the above code for other cards -->
     </div>
 </div>
 

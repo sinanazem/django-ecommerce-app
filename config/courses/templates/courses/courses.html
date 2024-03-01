@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_headers %} 
-  <style>
+  <!-- <style>
     .card {
       border-radius: 20px;
       margin-bottom: 20px;
@@ -21,13 +21,41 @@
       object-fit: cover; /* Ensure the image covers the entire container */
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 {% endblock %}
 
-{% block content %} 
+
+
+{% block content %}
+<style>
+  .card {
+    background-color: rgba(4, 51, 18, 0.5); /* Transparent dark blue background */
+    color: white; /* White text */
+  }
+  .card-img-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* White border for the image */
+  }
+  .card-title {
+    color: white; /* White title text */
+  }
+  .card-text,
+  .list-unstyled {
+    color: rgba(255, 255, 255, 0.8); /* Off-white text */
+  }
+  .btn-primary {
+    background-color: #007bff; /* Blue primary button color */
+    border-color: #007bff; /* Blue primary button border color */
+  }
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+  }
+</style>
+
+<div class="mt-5"></div>
 <div class="container mt-5">
-    <h2>Learn From the Experts</h2>
-<p> Choose from a variety of online video courses with new additions published every month. </p>
+  <h2>Learn From the Experts</h2>
+  <p>Choose from a variety of online video courses with new additions published every month.</p>
 </div>
 
 <div class="container mt-5">
@@ -48,36 +76,40 @@
       </div>
     </div>
     <div class="col-md-4">
-        <div class="card">
-          <img src="https://ioflood.com/blog/wp-content/uploads/2023/09/FastAPI-framework-in-Python-computer-screen-with-API-endpoints-data-exchange.jpg" class="card-img-top" alt="Course Image">
-          <div class="card-body">
-            <h5 class="card-title">FastAPI Framework</h5>
-            <p class="card-text">This course is about the FastAPI framework in Python...</p>
-            <ul class="list-unstyled">
-              <li><i class="far fa-clock"></i> 6 weeks</li>
-              <li><i class="fas fa-users"></i> 80 enrolled</li>
-              <li><i class="fas fa-dollar-sign"></i> $149</li>
-            </ul>
-            <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
-          </div>
+      <div class="card">
+        <img src="https://ioflood.com/blog/wp-content/uploads/2023/09/FastAPI-framework-in-Python-computer-screen-with-API-endpoints-data-exchange.jpg" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+          <h5 class="card-title">FastAPI Framework</h5>
+          <p class="card-text">This course is about the FastAPI framework in Python...</p>
+          <ul class="list-unstyled">
+            <li><i class="far fa-clock"></i> 6 weeks</li>
+            <li><i class="fas fa-users"></i> 80 enrolled</li>
+            <li><i class="fas fa-dollar-sign"></i> $149</li>
+          </ul>
+          <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://img-blog.csdnimg.cn/direct/7adf063387664192b5ef25671a6f225d.png" class="card-img-top" alt="Course Image">
-          <div class="card-body">
-            <h5 class="card-title">Django Rest Framework</h5>
-            <p class="card-text">This course is about building RESTful APIs with Django...</p>
-            <ul class="list-unstyled">
-              <li><i class="far fa-clock"></i> 8 weeks</li>
-              <li><i class="fas fa-users"></i> 100 enrolled</li>
-              <li><i class="fas fa-dollar-sign"></i> $199</li>
-            </ul>
-            <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
-          </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://img-blog.csdnimg.cn/direct/7adf063387664192b5ef25671a6f225d.png" class="card-img-top" alt="Course Image">
+        <div class="card-body">
+          <h5 class="card-title">Django Rest Framework</h5>
+          <p class="card-text">This course is about building RESTful APIs with Django...</p>
+          <ul class="list-unstyled">
+            <li><i class="far fa-clock"></i> 8 weeks</li>
+            <li><i class="fas fa-users"></i> 100 enrolled</li>
+            <li><i class="fas fa-dollar-sign"></i> $199</li>
+          </ul>
+          <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
         </div>
       </div>
+    </div>
     <!-- Repeat similar structure for other courses -->
   </div>
 </div>
+
+
+
+
 {% endblock %}
