@@ -1,39 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_headers %} 
-  <!-- <style>
-    .card {
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-    .glass-btn {
-      background-color: #343a40; /* Dark gray background color */
-      border: 2px solid #343a40; /* Dark gray border color */
-      color: #fff; /* White text color */
-      width: 100%; /* Set button width to 100% */
-    }
-    .glass-btn:hover {
-      background-color: #6c757d; /* Darker gray on hover */
-      border-color: #6c757d; /* Darker gray border on hover */
-    }
-    .card-img-top {
-      height: 200px; /* Set a fixed height for the images */
-      object-fit: cover; /* Ensure the image covers the entire container */
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
-{% endblock %}
-
-
-
-{% block content %}
 <style>
   .card {
-    background-color: rgba(4, 51, 18, 0.5); /* Transparent dark blue background */
+    background-color: rgba(10, 10, 10, 0.5); /* Transparent dark blue background */
     color: white; /* White text */
+    height: 100%;
   }
   .card-img-top {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* White border for the image */
+    height: 200px;
+    object-fit: cover;
   }
   .card-title {
     color: white; /* White title text */
@@ -50,64 +27,108 @@
     background-color: #0056b3; /* Darker blue on hover */
     border-color: #0056b3; /* Darker blue border on hover */
   }
+  .blogposter {
+    position: relative;
+    border-radius: 20px; /* Adjust border radius as needed */
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .blogposter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  }
+  
+  .blogposter h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+  }
 </style>
+{% endblock %}
 
-<div class="mt-5"></div>
-<div class="container mt-5">
-  <h2>Learn From the Experts</h2>
-  <p>Choose from a variety of online video courses with new additions published every month.</p>
-</div>
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://www.driftingruby.com/episodes/github-actions/download_image.png" class="card-img-top" alt="Course Image">
-        <div class="card-body">
-          <h5 class="card-title">Github Actions</h5>
-          <p class="card-text">This course is about CI/CD pipeline with GitHub Actions...</p>
-          <ul class="list-unstyled">
-            <li><i class="far fa-clock"></i> 4 weeks</li>
-            <li><i class="fas fa-users"></i> 50 enrolled</li>
-            <li><i class="fas fa-dollar-sign"></i> $99</li>
-          </ul>
-          <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
-        </div>
+
+{% block content %}
+
+<div class="container mb-5 mt-3 ">
+  <div class="blogposter" style="background-image: url('https://www.welocalize.com/wp-content/uploads/2022/11/Data-centric-Blog-Header-1440x438.png');">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-md-6 text-center">
+        <h1>Courses</h1>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://ioflood.com/blog/wp-content/uploads/2023/09/FastAPI-framework-in-Python-computer-screen-with-API-endpoints-data-exchange.jpg" class="card-img-top" alt="Course Image">
-        <div class="card-body">
-          <h5 class="card-title">FastAPI Framework</h5>
-          <p class="card-text">This course is about the FastAPI framework in Python...</p>
-          <ul class="list-unstyled">
-            <li><i class="far fa-clock"></i> 6 weeks</li>
-            <li><i class="fas fa-users"></i> 80 enrolled</li>
-            <li><i class="fas fa-dollar-sign"></i> $149</li>
-          </ul>
-          <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://img-blog.csdnimg.cn/direct/7adf063387664192b5ef25671a6f225d.png" class="card-img-top" alt="Course Image">
-        <div class="card-body">
-          <h5 class="card-title">Django Rest Framework</h5>
-          <p class="card-text">This course is about building RESTful APIs with Django...</p>
-          <ul class="list-unstyled">
-            <li><i class="far fa-clock"></i> 8 weeks</li>
-            <li><i class="fas fa-users"></i> 100 enrolled</li>
-            <li><i class="fas fa-dollar-sign"></i> $199</li>
-          </ul>
-          <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
-        </div>
-      </div>
-    </div>
-    <!-- Repeat similar structure for other courses -->
   </div>
 </div>
+
+  <div class="mt-5"></div>
+  <div class="container mt-5">
+    <h2>Learn From the Experts</h2>
+    <p>Choose from a variety of online video courses with new additions published every month.</p>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.driftingruby.com/episodes/github-actions/download_image.png" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Github Actions</h5>
+            <p class="card-text">This course is about CI/CD pipeline with GitHub Actions...</p>
+            <ul class="list-unstyled">
+              <li><i class="far fa-clock"></i> 4 weeks</li>
+              <li><i class="fas fa-users"></i> 50 enrolled</li>
+              <li><i class="fas fa-dollar-sign"></i> $99</li>
+            </ul>
+            <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://ioflood.com/blog/wp-content/uploads/2023/09/FastAPI-framework-in-Python-computer-screen-with-API-endpoints-data-exchange.jpg" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">FastAPI Framework</h5>
+            <p class="card-text">This course is about the FastAPI framework in Python...</p>
+            <ul class="list-unstyled">
+              <li><i class="far fa-clock"></i> 6 weeks</li>
+              <li><i class="fas fa-users"></i> 80 enrolled</li>
+              <li><i class="fas fa-dollar-sign"></i> $149</li>
+            </ul>
+            <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://img-blog.csdnimg.cn/direct/7adf063387664192b5ef25671a6f225d.png" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">Django Rest Framework</h5>
+            <p class="card-text">This course is about building RESTful APIs with Django...</p>
+            <ul class="list-unstyled">
+              <li><i class="far fa-clock"></i> 8 weeks</li>
+              <li><i class="fas fa-users"></i> 100 enrolled</li>
+              <li><i class="fas fa-dollar-sign"></i> $199</li>
+            </ul>
+            <a href="#" class="btn btn-primary glass-btn d-block mx-auto"><i class="far fa-glass"></i> Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 
 
 
