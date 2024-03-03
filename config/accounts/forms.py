@@ -46,5 +46,8 @@ class UserRegistrationForm(forms.Form):
     full_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={"class": "form-control"}))
     password = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={"class": "form-control"}))
 
+
+class UserLoginForm(forms.Form):
     
-        
+    phone_number = forms.CharField(max_length=11, widget=forms.TextInput(attrs={"class": "form-control"}))
+    password = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={"class": "form-control"}))
