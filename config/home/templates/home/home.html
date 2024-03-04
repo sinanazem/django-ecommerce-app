@@ -154,23 +154,23 @@ Home
     <div class="display-6 mb-4 fw-medium text-center mt-4">Asama's blogs cover all AI & Machine Learning News.</div>
 
     <div class="row">
-      {% for article in articles %}
+      {% for blog in blogs %}
         <div class="col-md-4 mb-4">
           <div class="card h-100" style="width: 100%;">
-            <img src="{{ article.image.url }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="...">
+            <img src="{{ blog.image.url }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="...">
             <div class="card-body d-flex flex-column">
               <div>
                 <span> . </span>
-                <span>{{ article.reading_time}}</span>
+                <span>{{ blog.reading_time}}</span>
                 <span> . </span>
-                 <span> {{ article.updated |date }}</span>
+                 <span> {{ blog.updated |date }}</span>
                  <span> . </span>
-                 <span> {{ article.author }}</span>
+                 <span> {{ blog.author }}</span>
               
               </div>
               
-              <h5 class="card-title mt-4">{{ article.title }}</h5>
-              <p class="card-text">{{ article.abstract }}</p>
+              <h5 class="card-title mt-4">{{ blog.title }}</h5>
+              <p class="card-text">{{ blog.abstract }}</p>
              
             </div>
           </div>
