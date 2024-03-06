@@ -7,13 +7,8 @@
 
 
 
-## Table of Contents
 
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+<br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br>
 
 
