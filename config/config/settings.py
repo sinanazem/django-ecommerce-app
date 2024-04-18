@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-xn6^i-k_8##6q&+f@$qi$9wlhn=n==djnsrhi#ge#g1q_!d&zx'
+SECRET_KEY = 'django-insecure-2!ip8ajuvg^j7c-0n&ke5)c=3(vbe^qnm6omc=9zwxnrs))5lr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,11 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Local Apps
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig',
-    'courses.apps.CoursesConfig',
-    'blog.apps.BlogConfig',
-    'community.apps.CommunityConfig',
+    'orders.apps.OrdersConfig',
+    
+    # 3rd apps
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +62,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates'],
+        'DIRS': [ BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                'orders.context_processors.cart',
             ],
         },
     },
@@ -132,5 +137,26 @@ MEDIA_ROOT = BASE_DIR / "media/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 AUTH_USER_MODEL = "accounts.User"
+
+# google account
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sinanazemm@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = "jndlombesydwwutq"
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "Asama Group"
+
+
+# Aravan Cloud
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'f4bb0945-76c6-408d-b1c5-766a9529c8f3'
+AWS_SECRET_ACCESS_KEY = '9300923c0c95e0e92ab0193643c4545281b5732b6900d267edc5ae8d7ee16733'
+AWS_S3_ENDPOINT_URL = 'https://s3.ir-thr-at1.arvanstorage.ir'
+
+AWS_STORAGE_BUCKET_NAME = 'mongard-shop'
+AWS_SERVICE_NAME = "s3"
+AWS_S3_FILE_OVERWRITE = False
+AWS_LOCAL_STORAGE = f'{BASE_DIR}/aws/'

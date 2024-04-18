@@ -21,9 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls', namespace="home")),
-    path('blog/', include('blog.urls', namespace="blog")),
-    path('community/', include('community.urls', namespace="community")),
-    path('accounts/', include('accounts.urls', namespace="accounts")),
-    path('courses/', include('courses.urls', namespace="courses")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include("home.urls",namespace="home")),
+    path('accounts/', include("accounts.urls",namespace="accounts")),
+    path('orders/', include("orders.urls",namespace="orders")),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

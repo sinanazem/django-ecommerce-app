@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %} {{product.name}} {% endblock%}
+{% block extra_headers %} <link rel="stylesheet" href="{% static 'home/css/home_style.css' %}"> {% endblock %}
+
+{% block content %}
+
+    
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="..." style="width: 350px" >
+
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="card-title"> {{product.name}} </h2>
+            <p> {{ product.description }} </p>
+            <small> {{ product.created }}</small>
+            <h5> {{product.price}} </h5>
+
+            <br><br>
+
+            <form action="{% url 'orders:cart_add' product.id %}" method="post">
+                {% csrf_token %}
+                {{forms}}
+                <input type="submit" value="add to cart">
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock%}
