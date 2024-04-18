@@ -23,19 +23,19 @@ Page Banner START -->
                           <!-- Content -->
                           <div class="col-md-6 px-md-5">
                               <!-- Title -->
-                              <h1 class="mb-3">Welcome to our online book store!</h1>
+                              <h1 class="mb-3">Welcome to our online Mobile store!</h1>
                               <p class="mb-3">Expand knowledge by reading book Two before narrow not relied on how except moment myself Dejection assurance. </p>
                               <!-- Search -->
                               <form class="bg-body rounded p-2">
                                   <div class="input-group">
-                                      <input class="form-control border-0 me-1" type="search" placeholder="Search book">
+                                      <input class="form-control border-0 me-1" type="search" placeholder="Search Cellphone">
                                       <button type="button" class="btn btn-primary mb-0 rounded">Search</button>
                                   </div>
                               </form>
                           </div>
                           <!-- Image -->
                           <div class="col-md-6 text-center">
-                              <img src="{% static 'images/book/book-bg.svg' %}" alt="">
+                              <img src="https://www.pngmart.com/files/13/iPhone-12-PNG-Transparent-Picture.png" alt="">
                           </div>
                       </div>
                       <!-- Row END -->
@@ -60,35 +60,28 @@ Page content START -->
                       <div class="col-md-4">
                           <h5 class="mb-0">All Listed Books</h5>
                       </div>
-                      <!-- Select option -->
-                      <div class="col-md-4 mt-3 mt-xl-0">
-                          <form class="border-bottom p-2 input-borderless">
-                              <select class="js-choice">
-                                  <option value="">Product type</option>
-                                  <option>PDF</option>
-                                  <option>Compact Disk</option>
-                                  <option>Paperback</option>
-                              </select>
-                          </form>
-                      </div>
-                      <!-- Select option -->
-                      <div class="col-md-4 mt-3 mt-xl-0">
-                          <form class="border-bottom p-2 input-borderless">
-                              <select class="js-choice">
-                                  <option value="">Select category</option>
-                                  <option>Software</option>
-                                  <option>Finance</option>
-                                  <option>Web design</option>
-                                  <option>Web Development</option>
-                                  <option>Information technology</option>
-                                  <option>Science</option>
-                              </select>
-                          </form>
-                      </div>
                   </div>
-                  <!-- Search option END -->
+                  <br><br>
+                  {% for category in categories %}
+
+                  <!-- Example split danger button -->
+                    <div class="btn-group">
+                      <a href="{% url 'home:category_filter' category.slug %}" class="btn btn-danger">{{category.name}}</a>
+                      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        {% for sub in category.scategory.all %}
+                        <li><a class="dropdown-item" href="{% url 'home:category_filter' sub.slug %}">{{sub.name}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+              
+                {% endfor %}
+
+
                   <!-- Book Grid START -->
-                  <div class="row g-4">
+                  <div class="row g-4 mt-5 ">
                       <!-- Card item START -->
                       {% for product in products %}
 
